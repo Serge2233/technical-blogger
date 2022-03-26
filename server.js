@@ -1,5 +1,4 @@
 const express = require("express")
-//routes import here
 const routes = require('./controllers/');
 const sequelize = require("./config/connection")
 const path = require("path")
@@ -33,7 +32,7 @@ app.use(express.static(path.join(__dirname, "public")))
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-// add routes below
+app.use(routes)
 
 
 sequelize.sync({ force: false }).then(() => {
