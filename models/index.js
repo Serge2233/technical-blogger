@@ -11,11 +11,11 @@ Post.belongsTo(User, {
     onDelete: 'SET NULL'
 })
 
-User.belongsToMany(Post, {
-    through: Likes,
-    as: 'liked_posts',
-    foreignKey: 'post_id'
-})
+// User.belongsToMany(Post, {
+//     through: Likes,
+//     as: 'liked_posts',
+//     foreignKey: 'post_id'
+// })
 
 Likes.belongsTo(User, {
     foreignKey: 'user_id'
