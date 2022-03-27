@@ -16,7 +16,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const sess = {
-  secret: 'hinewyork',
+  secret: 'sekret',
     cookie: {
       // Session will automatically expire in 20 mins
       expires: 20 * 60 * 1000
