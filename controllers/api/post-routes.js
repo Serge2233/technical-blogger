@@ -61,6 +61,7 @@ router.get('/', (req, res) => {
             model: User,
             attributes: ['username', 'twitter', 'github']
           }
+        }
         ]
     })
     .then(dbPostData => {
